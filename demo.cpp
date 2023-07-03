@@ -4,7 +4,7 @@ ___
 | |) / -_) '  \/ _ \
 |___/\___|_|_|_\___/
                      
-== Table of Contents ===================
+== Table of Contents ============================================
 - Demo: Factory
 */
 
@@ -17,16 +17,32 @@ using namespace Demo;
 
 int main(int argc, char const *argv[])
 {
-    Factory<Anything, AnythingA, AnythingB> fac;
+    /*
+    == Demo: Factory ============================================
+    */
+    
+    // Create factory
     CFactory<
         Factory<Anything,   AnythingA,  AnythingB>,
                 Something,  SomethingA, SomethingB
     > cFac;
+
+    // Create a factory pointer (for the client)
     Factory<Anything, AnythingA, AnythingB>* cFacPtr = &cFac;
 
-    cFacPtr->Make<Anything>()->Print();
-    cFacPtr->Make<AnythingA>()->Print();
-    cFacPtr->Make<AnythingB>()->Print();
+    // Use the factory pointer
+    Anything*  myA  = cFacPtr->Make<Anything>();
+    AnythingA* myAa = cFacPtr->Make<AnythingA>();
+    AnythingB* myAb = cFacPtr->Make<AnythingB>();
+
+    myA->Print();
+    myAa->Print();
+    myAb->Print();
+
+    // Cleanup
+    delete myA;
+    delete myAa;
+    delete myAb;
 
     return 0;
 }
