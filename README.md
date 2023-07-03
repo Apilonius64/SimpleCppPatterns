@@ -3,7 +3,7 @@ A small, lightweight cpp libary (still in process) which implements easy-to-use 
 
 ## How to use
 ### Abstract factory
-```CPP
+```cpp
 // Create factory
 CFactory<
     Factory<Anything,   AnythingA,  AnythingB>,
