@@ -1,5 +1,5 @@
 # SimpleCppPatterns
-A small, lightweight cpp libary (still in process) which implements easy-to-use classes for the most common design patterns.
+A small, lightweight cpp library (still in process) which implements easy-to-use classes for the most common design patterns.
 
 ## How to use
 ### Abstract factory
@@ -18,7 +18,7 @@ Anything*  myA  = cFacPtr->Make<Anything>();
 AnythingA* myAa = cFacPtr->Make<AnythingA>();
 AnythingB* myAb = cFacPtr->Make<AnythingB>();
 ```
-You can find everything at on place at the [demo files](demo.cpp).
+You can find everything at one place at the [demo files](demo.cpp).
 
 ## What is already implemented?
 - Abstract Factory
