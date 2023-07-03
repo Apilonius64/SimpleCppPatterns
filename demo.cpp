@@ -1,17 +1,26 @@
-#include "Factory/Factory.h"
+/*                                                                         
+___                
+|   \ ___ _ __  ___ 
+| |) / -_) '  \/ _ \
+|___/\___|_|_|_\___/
+                     
+*/
+
+
+#include "Patterns/Factory.h"
+#include "demo.h"
+
+using namespace Patterns;
+using namespace Demo;
 
 int main(int argc, char const *argv[])
 {
     Factory<Anything, AnythingA, AnythingB> fac;
-    ChildFactory<
+    CFactory<
         Factory<Anything,   AnythingA,  AnythingB>,
                 Something,  SomethingA, SomethingB
     > cFac;
     Factory<Anything, AnythingA, AnythingB>* cFacPtr = &cFac;
-
-    cFacPtr->MakeType(TypeContainer<Anything>())->Print();
-    cFacPtr->MakeType(TypeContainer<AnythingA>())->Print();
-    cFacPtr->MakeType(TypeContainer<AnythingB>())->Print();
 
     cFacPtr->Make<Anything>()->Print();
     cFacPtr->Make<AnythingA>()->Print();
