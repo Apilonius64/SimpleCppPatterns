@@ -30,3 +30,4 @@ Hopefully, a lot of common patterns (The development is just beginning). Issues 
 You may take a look at the wikipedia article: https://en.wikipedia.org/wiki/Design_Patterns
 
 ## License
+This repository is licensed under the MIT license. Take a look at the [LICENSE](LICENSE) file for more information.
