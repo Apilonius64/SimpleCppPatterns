@@ -18,7 +18,7 @@ Anything*  myA  = cFacPtr->Make<Anything>();
 AnythingA* myAa = cFacPtr->Make<AnythingA>();
 AnythingB* myAb = cFacPtr->Make<AnythingB>();
 ```
-Everything at on place at the [demo files](demo.cpp).
+You can find everything at on place at the [demo files](demo.cpp).
 
 ## What is already implemented?
 - Abstract Factory
